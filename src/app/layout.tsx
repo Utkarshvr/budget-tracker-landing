@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Budget Tracker - Take Control of Your Finances",
+  title: "BudgetWise - Take Control of Your Finances",
   description:
     "Organize your income and expenses with smart category management, account tracking, and fund reservations. Your personal finance companion.",
 };

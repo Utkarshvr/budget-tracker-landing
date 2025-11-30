@@ -55,13 +55,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-xl bg-[#22c55e] flex items-center justify-center shadow-lg shadow-[#22c55e]/30">
-                <span className="text-lg font-semibold uppercase text-[#022c22]">
-                  BT
-                </span>
-              </div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-[#f9fafb]">
-                Budget Tracker
+              <Image
+                src="/icon.png"
+                alt="BudgetWise"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <span className="text-sm font-semibold tracking-wider text-[#f9fafb]">
+                BudgetWise
               </span>
             </div>
             <div className="flex items-center gap-4">
@@ -470,13 +472,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center gap-3 mb-4 md:mb-0">
-              <div className="h-8 w-8 rounded-lg bg-[#22c55e] flex items-center justify-center shadow-lg shadow-[#22c55e]/30">
-                <span className="text-sm font-semibold uppercase text-[#022c22]">
-                  BT
-                </span>
-              </div>
-              <span className="text-sm font-semibold uppercase tracking-wider text-[#f9fafb]">
-                Budget Tracker
+              <Image
+                src="/icon.png"
+                alt="BudgetWise"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <span className="text-sm font-semibold tracking-wider text-[#f9fafb]">
+                BudgetWise
               </span>
             </div>
             <p className="text-sm text-[#9ca3af]">
