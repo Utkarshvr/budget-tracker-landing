@@ -1,12 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { CustomSelect } from "./CustomSelect";
 
 export function WaitlistForm() {
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [excitement, setExcitement] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -16,8 +13,8 @@ export function WaitlistForm() {
     setError(null);
     setSuccess(false);
 
-    if (!email || !name || !excitement) {
-      setError("Please fill in all fields");
+    if (!email) {
+      setError("Please enter your email");
       return;
     }
 
@@ -29,7 +26,7 @@ export function WaitlistForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, name, excitement }),
+        body: JSON.stringify({ email }),
       });
 
       const data = await response.json();
@@ -42,8 +39,6 @@ export function WaitlistForm() {
 
       setSuccess(true);
       setEmail("");
-      setName("");
-      setExcitement("");
       setLoading(false);
     } catch (err) {
       setError("Failed to submit. Please try again.");
@@ -85,24 +80,6 @@ export function WaitlistForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
         <label
-          htmlFor="name"
-          className="block text-sm font-medium text-[#9ca3af] mb-2"
-        >
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Enter your name"
-          className="w-full px-4 py-3 rounded-xl bg-[#111827] border border-[#1f2937] text-[#f9fafb] placeholder-[#6b7280] focus:outline-none focus:border-[#22c55e] focus:ring-2 focus:ring-[#22c55e]/20 transition-all"
-          required
-        />
-      </div>
-
-      <div>
-        <label
           htmlFor="email"
           className="block text-sm font-medium text-[#9ca3af] mb-2"
         >
@@ -116,27 +93,6 @@ export function WaitlistForm() {
           placeholder="Enter your email"
           className="w-full px-4 py-3 rounded-xl bg-[#111827] border border-[#1f2937] text-[#f9fafb] placeholder-[#6b7280] focus:outline-none focus:border-[#22c55e] focus:ring-2 focus:ring-[#22c55e]/20 transition-all"
           required
-        />
-      </div>
-
-      <div>
-        <label
-          htmlFor="excitement"
-          className="block text-sm font-medium text-[#9ca3af] mb-2"
-        >
-          How excited are you for this?
-        </label>
-        <CustomSelect
-          id="excitement"
-          value={excitement}
-          onChange={setExcitement}
-          placeholder="🤔 Very excited...?"
-          required
-          options={[
-            { value: "very-excited", label: "Very Excited! 🚀" },
-            { value: "somewhat-excited", label: "Somewhat Excited 🙂" },
-            { value: "curious", label: "Curious 🤔" },
-          ]}
         />
       </div>
 

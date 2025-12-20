@@ -74,7 +74,7 @@ export default function Home() {
                 Features
               </a>
               <a
-                href="#download"
+                href="#hero"
                 className="px-4 py-2 rounded-full bg-[#22c55e] text-[#022c22] font-medium hover:bg-[#16a34a] transition-colors"
               >
                 Get Started
@@ -85,7 +85,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-5 pb-32 px-4 sm:px-6 lg:px-8">
+      <section id="hero" className="relative overflow-hidden pt-5 pb-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
@@ -95,7 +95,7 @@ export default function Home() {
               transition={{ duration: 1.5, ease: "easeOut" }}
               className="text-left"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#22c55e]/15 border border-[#22c55e]/30 mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#22c55e]/15 border border-[#22c55e]/30 mb-8">
                 <span className="text-[#22c55e] text-sm font-medium">
                   ✨ Smart Budget Management
                 </span>
@@ -111,20 +111,21 @@ export default function Home() {
                 management, account tracking, and fund reservations. Your
                 personal finance companion.
               </p>
-              <div className="flex flex-col sm:flex-row items-start gap-4">
-                <a
-                  href="#download"
-                  className="px-8 py-4 rounded-full bg-[#22c55e] text-[#022c22] font-semibold text-lg hover:bg-[#16a34a] transition-all transform hover:scale-105 shadow-lg shadow-[#22c55e]/20"
-                >
-                  Join Waiting List
-                </a>
+              <div className="mb-8">
+                <div className="max-w-md">
+                  <div className="p-6 rounded-2xl bg-[#020617] border border-[#1f2937] shadow-2xl">
+                    <WaitlistForm />
+                  </div>
+                </div>
+              </div>
+              {/* <div className="flex flex-col sm:flex-row items-start gap-4">
                 <a
                   href="#features"
                   className="px-8 py-4 rounded-full border-2 border-[#1f2937] text-[#f9fafb] font-semibold text-lg hover:border-[#22c55e] hover:text-[#22c55e] transition-all"
                 >
                   Learn More
                 </a>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* Right Column - App Screenshots */}
@@ -452,16 +453,6 @@ export default function Home() {
                 Join the waitlist and be among the first to experience Budget
                 Tracker when it launches.
               </p>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              transition={{ duration: 1.5, delay: 0.3 }}
-              className="max-w-md mx-auto"
-            >
-              <div className="p-6 rounded-2xl bg-[#020617] border border-[#1f2937] shadow-2xl">
-                <WaitlistForm />
-              </div>
             </motion.div>
           </div>
         </section>

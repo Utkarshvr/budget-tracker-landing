@@ -4,12 +4,12 @@ import { supabase } from "@/lib/supabase";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, name, excitement } = body;
+    const { email } = body;
 
     // Validation
-    if (!email || !name || !excitement) {
+    if (!email) {
       return NextResponse.json(
-        { error: "All fields are required" },
+        { error: "Email is required" },
         { status: 400 }
       );
     }
@@ -29,8 +29,6 @@ export async function POST(request: NextRequest) {
       .insert([
         {
           email,
-          name,
-          excitement,
         },
       ])
       .select()
