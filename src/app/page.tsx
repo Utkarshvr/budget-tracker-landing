@@ -150,7 +150,7 @@ export default function Home() {
                   style={{ boxShadow: "0 0 90px 10px rgba(34, 197, 94, 0.1)" }}
                 >
                   <Image
-                    src="/app-screenshots/categories-screen.jpeg"
+                    src="/app-screenshots/left.jpeg"
                     alt="Categories Screen"
                     width={280}
                     height={600}
@@ -172,7 +172,7 @@ export default function Home() {
                   style={{ boxShadow: "0 0 90px 10px rgba(34, 197, 94, 0.1)" }}
                 >
                   <Image
-                    src="/app-screenshots/transactions-screen.jpeg"
+                    src="/app-screenshots/center.jpeg"
                     alt="Transactions Screen"
                     width={300}
                     height={650}
@@ -194,7 +194,7 @@ export default function Home() {
                   style={{ boxShadow: "0 0 90px 10px rgba(34, 197, 94, 0.1)" }}
                 >
                   <Image
-                    src="/app-screenshots/accounts-screen.jpeg"
+                    src="/app-screenshots/right.jpeg"
                     alt="Accounts Screen"
                     width={280}
                     height={600}
