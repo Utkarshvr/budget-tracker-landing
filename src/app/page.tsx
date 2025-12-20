@@ -85,7 +85,10 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative overflow-hidden pt-5 pb-32 px-4 sm:px-6 lg:px-8">
+      <section
+        id="hero"
+        className="relative overflow-hidden pt-5 pb-32 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text Content */}
@@ -443,7 +446,7 @@ export default function Home() {
             <motion.div
               variants={fadeInUp}
               transition={{ duration: 1.5 }}
-              className="text-center mb-12"
+              className="text-center mb-12 flex flex-col items-center justify-center"
             >
               <h2 className="text-4xl sm:text-5xl font-bold mb-6">
                 Ready to Transform Your
@@ -453,6 +456,13 @@ export default function Home() {
                 Join the waitlist and be among the first to experience Budget
                 Tracker when it launches.
               </p>
+              <div className="mt-8 w-full flex items-center justify-center">
+                <div className="min-w-96">
+                  <div className="p-6 rounded-2xl bg-[#020617] border border-[#1f2937] shadow-2xl">
+                    <WaitlistForm />
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
