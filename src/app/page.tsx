@@ -74,6 +74,12 @@ export default function Home() {
                 Features
               </a>
               <a
+                href="/privacy-policy"
+                className="text-sm text-[#9ca3af] hover:text-[#22c55e] transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
                 href="#hero"
                 className="px-4 py-2 rounded-full bg-[#22c55e] text-[#022c22] font-medium hover:bg-[#16a34a] transition-colors"
               >
