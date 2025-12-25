@@ -197,8 +197,14 @@ export default function PrivacyPolicy() {
                   Your data is retained as long as your account remains active.
                 </li>
                 <li>
-                  You may request deletion of your data by contacting us at the
-                  email address below.
+                  You may request deletion of your data by{" "}
+                  <Link
+                    href="/delete-account"
+                    className="text-[#22c55e] hover:text-[#16a34a] transition-colors underline"
+                  >
+                    submitting a deletion request
+                  </Link>{" "}
+                  or by contacting us at the email address below.
                 </li>
                 <li>
                   Upon deletion, your data will be permanently removed from our

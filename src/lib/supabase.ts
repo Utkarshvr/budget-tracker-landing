@@ -9,3 +9,22 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
+// Server-side Supabase client with service role key (bypasses RLS)
+// Use this for server-side API routes
+export function createServerClient() {
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  
+  if (!serviceRoleKey) {
+    // Fallback to anon key if service role key is not available
+    console.warn("SUPABASE_SERVICE_ROLE_KEY not found, using anon key (may have RLS restrictions)");
+    return supabase;
+  }
+
+  return createClient(supabaseUrl, serviceRoleKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+    },
+  });
+}
+
